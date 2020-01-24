@@ -103,7 +103,7 @@ automation:
         value_template: '{{ now().hour == (states.input_number.heater_dh_hour.state  | round(0))  and  now().minute == (states.input_number.heater_dh_minutes.state  | round(0) )  }}'       
     action:
        - service: homeassistant.turn_off
-         entity_id: switch.maz704_heater, automation.heater_dh_off
+         entity_id: switch.XXXXXX_heater, automation.heater_dh_off
        - service: notify.pushbullet
          data_template:
            message: 'Motorvärmare Stängs nu av {{now().strftime("%H:%M:%S")}} Temp ute: {{ states.sensor.dark_sky_temperature.state}}°C'
